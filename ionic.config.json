@@ -1,0 +1,7 @@
+{
+  "name": "FinalMovile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
