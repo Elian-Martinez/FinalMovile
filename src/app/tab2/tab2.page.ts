@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Empresas } from '../Models/Models';
+import { FirestoreService } from '../Services/firestore.service';
+
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  resultado: Empresas[] = [];
 
-  constructor() {}
+  constructor( private database: FirestoreService) {}
+  ngOnInit(){
+    this.getResultado()
+  }
 
+  getResultado(){
+    this.database.getCollection<Empresas>('Empresas').subscribe(res =>{
+      console.log('datos', res);
+      this.resultado=res;
+    })
+    
+  }
 }

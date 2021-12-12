@@ -1,17 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      PROYECTO FINAL - INTRODUCCION AL DESARROLLO MOVILE
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div>
+    <h1 class="text">REGISTRO DE EMPRESAS</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label color="Black">Ingrese el nombre: </ion-label>
+        <ion-input [(ngModel)]="data.Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese el tipo: </ion-label>
+        <ion-input [(ngModel)]="data.Tipo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese la Foto: </ion-label>
+        <ion-input type="file" [id]="pic"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese el telefono: </ion-label>
+        <ion-input [(ngModel)]="data.Telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese la direccion: </ion-label>
+        <ion-input [(ngModel)]="data.Direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese la latitud: </ion-label>
+        <ion-input [(ngModel)]="data.Latitud"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="Black">Ingrese la longuitud: </ion-label>
+        <ion-input [(ngModel)]="data.Longuitud"></ion-input>
+      </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    </ion-list>
+  </div>
+  <div class="button">
+    <ion-button (click)="Crearnuevo()">
+      Crear
+    </ion-button>
+  </div>
+ 
 </ion-content>
